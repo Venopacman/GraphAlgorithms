@@ -18,10 +18,8 @@ public class TreePlusEuristic extends AbstractAlgorithm {
 
     @Override
     public void make(Integer x) throws Exception {
-        if (!graph.contains(x)) {
             graph.add(x, x);
             evristic.add(x, 0);
-        } else throw new Exception("This element already exist!");
     }
 
     @Override

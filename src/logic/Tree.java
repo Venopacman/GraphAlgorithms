@@ -15,9 +15,7 @@ public class Tree extends AbstractAlgorithm {
 
     @Override
     public void make(Integer x) throws Exception {
-        if (!graph.contains(x)) {
             graph.add(x, x);
-        } else throw new Exception("This element already exist!");
     }
 
     @Override
@@ -26,8 +24,7 @@ public class Tree extends AbstractAlgorithm {
     }
 
     @Override
-    public Integer find(Integer buff) {
-        int x = buff;
+    public Integer find(Integer x) {
         while (graph.get(x) != x)
             x = graph.get(x);
         return graph.get(x);

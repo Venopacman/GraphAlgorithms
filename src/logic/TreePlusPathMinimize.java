@@ -19,10 +19,8 @@ public class TreePlusPathMinimize extends AbstractAlgorithm {
 
     @Override
     public void make(Integer x) throws Exception {
-        if (!graph.contains(x)) {
             graph.add(x, x);
             rang.add(x, 0);
-        } else throw new Exception("This element already exist!");
     }
 
     @Override
@@ -36,7 +34,7 @@ public class TreePlusPathMinimize extends AbstractAlgorithm {
             rang.set(y, rang.get(y) + 1);
         }
     }
-// TODO the reason for temp1???
+
     @Override
    public Integer find(Integer x) {
         Integer temp = x;

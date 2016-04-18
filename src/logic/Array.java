@@ -14,9 +14,7 @@ public class Array extends AbstractAlgorithm {
 
     @Override
     public void make(Integer x) throws Exception {
-        if (!graph.contains(x)) {
-            graph.add(x, x);
-        } else throw new Exception("This element already exist");
+        graph.add(x, x);
     }
 
     @Override
